@@ -6,7 +6,7 @@ use ReflectionClass;
 
 abstract class DataTypes
 {
-    public function toArray()
+    public function toArray(): array
     {
         $data = [];
         $ref = new ReflectionClass($this);
@@ -73,7 +73,7 @@ abstract class DataTypes
      * @param $data
      * @return array
      */
-    public static function fromIndexArray($data)
+    public static function fromIndexArray($data): array
     {
         $list = [];
         foreach ($data as $item) {
